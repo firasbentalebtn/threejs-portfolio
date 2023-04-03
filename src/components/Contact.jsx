@@ -6,9 +6,17 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+//template_kwvkfin
+//service_hbxnizv
+//aRlEtrct_5dus23LT
 const Contact = () => {
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const {name,value} = e.target;
+    setForm({...form,[name]:value})
+  };
+  const handleSubmit = (e) => {
+    
+  };
 
   const [Loading, setLoading] = useState(false);
   const formRef = useRef();
@@ -74,7 +82,10 @@ const Contact = () => {
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
-      ></motion.div>
+      >
+        <EarthCanvas/>
+
+      </motion.div>
     </div>
   );
 };
