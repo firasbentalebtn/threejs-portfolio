@@ -6,16 +6,37 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-//template_kwvkfin
-//service_hbxnizv
-//aRlEtrct_5dus23LT
+
 const Contact = () => {
   const handleChange = (e) => {
     const {name,value} = e.target;
     setForm({...form,[name]:value})
   };
   const handleSubmit = (e) => {
-    
+    e.preventDefault();
+    setLoading(true);
+    emailjs.send('service_hbxnizv','template_kwvkfin',{
+      from_name:form.name,
+      to_name:'Firas',
+      from_email:form.email,
+      to_email:'bentaleb.firas.dev@gmail.com',
+      message:form.message,
+
+    },'aRlEtrct_5dus23LT'
+    )
+    .then(()=>{
+      setLoading(false)
+      alert('I have Received your request and i will get back to you as soon as possible !')
+      setForm=({
+        name:'',
+        email:'',
+        message:''
+      })
+    },(error)=>{
+      setLoading(false)
+      console.log('error occured')
+      alert('something went wrong')
+    })
   };
 
   const [Loading, setLoading] = useState(false);
