@@ -1,13 +1,12 @@
 import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { github } from "../assets";
+import showcaseLinkIcon from "../assets/link.png"
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
-
 const ProjectCard = ({
   index,
   name,
@@ -15,6 +14,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  showcase_link
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -32,11 +32,13 @@ const ProjectCard = ({
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
+          
+
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              className='black-gradient bg-white	 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
                 src={github}
@@ -44,6 +46,17 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
+            <div
+              onClick={() => window.open(showcase_link, "_blank")}
+              className='bg-white w-10 ml-2 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src={showcaseLinkIcon}
+                alt='source code'
+                className='w-1/2 h-1/2 object-contain'
+              />
+            </div>
+           
             
           </div>
           
@@ -74,7 +87,7 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText} `}>My Coding</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -83,7 +96,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          In my projects, I strive to showcase my skills as a front-end web developer by creating unique and interactive websites and applications. Using my expertise in HTML, CSS, JavaScript, and various front-end frameworks, I build custom solutions that meet the specific needs of each project. Whether it's a simple landing page or a complex web application, I focus on creating clean and maintainable code that is optimized for performance and usability. By staying up-to-date with the latest web technologies and design trends, I am able to deliver cutting-edge solutions that help businesses succeed in today's digital landscape.
+As a front-end web developer, I create unique and interactive websites and applications using HTML, CSS, JavaScript, and frameworks. I build custom solutions that optimize performance and usability and stay up-to-date with the latest technologies and design trends to deliver cutting-edge solutions for businesses.
         </motion.p>
       </div>
 
