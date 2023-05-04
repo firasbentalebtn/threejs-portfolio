@@ -24,14 +24,20 @@ import {
   import eaze from "../assets/eazeshowcase.png"
   import blaster from "../assets/blaster.png"
   import thed from "../assets/thed.png"
-
+  import yt_clone from "../assets/yt-clone.png"
+  import eazeui from "../assets/eaze-ui.png"
+  import cibo from "../assets/cibo.png"
+  import baddal from "../assets/baddal.png"
 
   export const navLinks = [
     {
       id: "about",
       title: "About",
     },
-    
+    {
+      id: "experience",
+      title: "Experience",
+    },
     {
       id: "work",
       title: "Work",
@@ -40,25 +46,43 @@ import {
       id: "contact",
       title: "Contact",
     },
+  
   ];
   
   const services = [
     {
-      title: "Web Developer",
+      title: "Front-End Web Dev & UI Designer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Creating Engaging Web Experiences",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Pixel-Perfect Designs & User-Centered UX",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Custom Web Solutions for Your Business",
       icon: creator,
     },
+    {
+      title: "HTML/CSS/JS Web Interface Design",
+      icon: web,
+    },
+    {
+      title: "Simplifying User Journeys with UI/UX",
+      icon: mobile,
+    },
+    {
+      title: "Engaging Websites That Drive Results",
+      icon: creator,
+    },
+    {
+      title: "Beautiful UI/UX for Web Success",
+      icon: backend,
+    },
+    
   ];
   
   const technologies = [
@@ -280,7 +304,90 @@ import {
       source_code_link: "https://github.com/firasbentalebtn/thedwebsite",
       showcase_link:"https://firasbentalebtn.github.io/thed3/"
     },
+    {
+      name: "Youtube-Clone",
+      description:
+        "This is a YouTube-like web app built with ReactJS and Material UI, featuring video sharing, liking, commenting, and subscribing functionalities. It utilizes RapidAPI to fetch and display relevant content, including trending videos and recommended content. The app offers a user-friendly interface, personalized content delivery, and valuable insights.",
+      tags: [
+        {
+          name: "React-Js",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "CSS",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Javascript",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "RapidAPI",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "React-Routing",
+          color: "blue-text-gradient",
+        },
+        
+      ],
+      image: yt_clone,
+      source_code_link: "https://github.com/firasbentalebtn/thedwebsite",
+      showcase_link:"https://youtubereactcloneapp.netlify.app/"
+    },
   ];
-  
-  export { services, technologies, experiences, projects };
+  const projectsUi = [
+    {
+      name: "Eaze",
+      description:
+        "The UI design of the Eaze mobile app boasts a sleek and intuitive interface, emphasizing convenience and simplicity. The app showcases the product in action with an eye-catching banner image and highlights its key features and benefits. Calls to action for early access are prominently displayed. The inclusion of customer testimonials and partner logos serves as social proof, effectively communicating the value of Eaze as a smart shopping solution.",
+      tags: [
+        {
+          name: "Adobe Xd",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Ui Design",
+          color: "green-text-gradient",
+        },
+      ],
+      image: eazeui,
+      behance_link: "https://www.behance.net/gallery/138599791/Eaze",
+    },
+    {
+      name: "Cibo",
+      description:
+        "Cibo's user-friendly design and enticing imagery provide a seamless experience for food enthusiasts seeking to explore their favorite ethnic flavors. The intuitive interface allows for easy browsing and searching of specific cuisines, making the process enjoyable for users.",
+      tags: [
+        {
+          name: "Adobe Xd",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Ui Design",
+          color: "green-text-gradient",
+        },
+      ],
+      image: cibo,
+      behance_link: "https://www.behance.net/gallery/138600015/Ethnic-food-app",
+    },
+    {
+      name: "Baddel",
+      description:
+        "The UI design for the redesign of Baddel.tn's ecommerce website focuses on modernizing the platform. A clean and minimalist design creates a sleek and sophisticated look while improving navigation and ease of use. The inclusion of user-friendly features such as quick view, product filters, and wishlist functionality enhances the overall shopping experience, encouraging users to return time and time again.",
+      tags: [
+        {
+          name: "Adobe Xd",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Ui Design",
+          color: "green-text-gradient",
+        },
+      ],
+      image: baddal,
+      behance_link: "https://www.behance.net/gallery/145847259/Baddeltn",
+    },
+  ]
+  export { services, technologies, experiences, projects,projectsUi };
   

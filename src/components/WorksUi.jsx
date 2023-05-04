@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import showcaseLinkIcon from "../assets/link.png"
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projectsUi } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({
   index,
@@ -13,8 +13,7 @@ const ProjectCard = ({
   description,
   tags,
   image,
-  source_code_link,
-  showcase_link
+  behance_link
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -37,7 +36,7 @@ const ProjectCard = ({
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              onClick={() => window.open(behance_link, "_blank")}
               className='black-gradient bg-white	 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
               <img
@@ -64,7 +63,7 @@ const ProjectCard = ({
 
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px] '>{description}</p>
+          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -83,11 +82,11 @@ const ProjectCard = ({
 };
 
 
-const Works = () => {
+const WorksUi = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My Coding</p>
+        <p className={`${styles.sectionSubText} `}>My UI Design</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
@@ -95,13 +94,12 @@ const Works = () => {
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-As a front-end web developer, I create unique and interactive websites and applications using HTML, CSS, JavaScript, and frameworks. I build custom solutions that optimize performance and usability and stay up-to-date with the latest technologies and design trends to deliver cutting-edge solutions for businesses.
+        > Discover my collection of UI design projects, tailored to the user's needs with clean aesthetics and intuitive functionality. From mobile apps to web interfaces, my designs prioritize seamless user experiences that elevate your digital presence.
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
+        {projectsUi.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
@@ -109,4 +107,4 @@ As a front-end web developer, I create unique and interactive websites and appli
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(WorksUi, "");
