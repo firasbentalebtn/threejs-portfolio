@@ -35,20 +35,14 @@ import {
       title: "About",
     },
     {
-      id: "experience",
-      title: "Experience",
-    },
-    {
       id: "work",
-      title: "Work",
-    },
+      title: "Experience",
+    }, 
     {
       id: "contact",
       title: "Contact",
     },
-  
-  ];
-  
+  ];  
   const services = [
     {
       title: "Front-End Web Dev & UI Designer",
@@ -185,7 +179,6 @@ import {
   ];
   
 
-  
   const projects = [
     {
       name: "Elvie-Formation",

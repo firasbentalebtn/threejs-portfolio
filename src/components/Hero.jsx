@@ -1,6 +1,5 @@
 import React from 'react'
 import {styles} from '../styles'
-import {ComputersCanvas} from './canvas'
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
@@ -15,7 +14,6 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>I develop Front-End Websites , User <br className='sm:block hidden'/> interfaces and Web applications </p>
         </div>
       </div>
-      
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
